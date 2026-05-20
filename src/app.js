@@ -115,7 +115,7 @@ async function run() {
           _id: new ObjectId(id),
         });
 
-        // If not found
+        
         if (result.deletedCount === 0) {
           return res.status(404).send({
             success: false,
@@ -123,7 +123,6 @@ async function run() {
           });
         }
 
-        
         res.send({
           success: true,
           message: "Car deleted successfully",
