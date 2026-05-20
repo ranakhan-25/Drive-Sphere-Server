@@ -123,7 +123,7 @@ async function run() {
           });
         }
 
-        // Success Response
+        
         res.send({
           success: true,
           message: "Car deleted successfully",
