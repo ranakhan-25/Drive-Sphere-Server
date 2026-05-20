@@ -228,7 +228,7 @@ async function run() {
       try {
         const data = req.body;
 
-        // Save Booking
+       
         const result = await BookingCollection.insertOne(data);
 
         if (!result.insertedId) {
@@ -238,7 +238,7 @@ async function run() {
           });
         }
 
-        // Increase booking_count
+      
         await carsCollection.updateOne(
           {
             _id: new ObjectId(data.carId),
