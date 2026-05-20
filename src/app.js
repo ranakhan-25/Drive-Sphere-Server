@@ -90,7 +90,6 @@ async function run() {
           payload: result,
         });
       } catch (error) {
-        console.log(error);
 
         res.send({
           success: false,
