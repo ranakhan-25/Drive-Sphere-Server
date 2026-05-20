@@ -83,8 +83,6 @@ async function run() {
           };
         }
 
-        console.log(query);
-
         const result = await carsCollection.find(query).toArray();
 
         res.send({
