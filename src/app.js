@@ -176,19 +176,16 @@ async function run() {
       try {
         const { id } = req.params;
 
-        
         const result = await carsCollection.findOne({
           _id: new ObjectId(id),
         });
 
-        
         if (!result) {
           return res.status(404).json({
             message: "Car not found with this ID",
           });
         }
 
-       
         res.status(200).json({
           message: "Car found successfully",
           payload: result,
